@@ -1,8 +1,13 @@
+import { Outlet } from "react-router-dom";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 
 const Root = () => {
     return (
         <div>
-            <h1 className="text-red-500 text-5xl">this is root</h1>
+            <Navbar></Navbar>
+            <Outlet></Outlet>
+            <Footer></Footer>
         </div>
     );
 };
