@@ -20,13 +20,16 @@ const addToStoredReadList = (id) =>{
         storedList.push(id)
         const storedListStr = JSON.stringify(storedList)
         localStorage.setItem('Read-List', storedListStr)
-        toast('this book is added to read list')
+        toast.success("Added book to read list!", {
+            position: "top-center"
+          });
+    
     }
 }
 
 
 const getStoredWishList = () =>{
-    const storedWishListStr = localStorage.getItem('Read-List');
+    const storedWishListStr = localStorage.getItem('wish-list');
     if(storedWishListStr){
           const storedWishList = JSON.parse(storedWishListStr)
           return storedWishList
@@ -44,8 +47,11 @@ const addToStoredWishList = (id) =>{
     else{
         storedWishList.push(id)
         const storedWishListStr = JSON.stringify(storedWishList)
-        localStorage.setItem('Read-List', storedWishListStr)
+        localStorage.setItem('wish-list', storedWishListStr)
+        toast.success("Added book to wish list!", {
+            position: "top-center"
+          });
     }
 }
 
-export{addToStoredReadList,addToStoredWishList,getStoredReadList}
+export{addToStoredReadList,addToStoredWishList,getStoredReadList,getStoredWishList}

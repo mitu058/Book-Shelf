@@ -13,6 +13,7 @@ import BookDetails from './components/BookDetails';
 import ListedBooks from './components/ListedBooks';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Chart from './components/Chart';
 
 
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
          path:'listedBooks',
          element:<ListedBooks></ListedBooks>,
          loader: ()=> fetch('/booksData.json')
+      },
+      {
+      path:'readBooks',
+      element:<Chart></Chart>
       },
     {
       path:'dashboard',
