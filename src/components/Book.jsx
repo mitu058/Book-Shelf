@@ -39,10 +39,14 @@ const Book = ({ book }) => {
            <div className="flex space-x-3  items-center justify-items-center">
            <div className="text-xl">{rating}</div>
             {/* <div>{totalPages}</div> */}
-            <div className="rating gap-1 text-sm">
-  <input type="radio" name="rating-3" className="mask mask-heart bg-red-400" />
-  <input type="radio" name="rating-3" className="mask mask-heart bg-orange-400" defaultChecked />
-  <input type="radio" name="rating-3" className="mask mask-heart bg-yellow-400" />
+            <div className="rating rating-md">
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+  <input
+    type="radio"
+    name="rating-2"
+    className="mask mask-star-2 bg-orange-400"
+    defaultChecked />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
   
 </div>
            </div>
